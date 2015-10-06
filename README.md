@@ -1,7 +1,5 @@
 # CakeStrap   
 
-[![Build Status](https://api.travis-ci.org/cakephp/app.png)](https://travis-ci.org/cakephp/app)
-
 CakeStrap is a bootstrap for CakePHP - HTML5 CakePHP3.x Bootstrap 3.3.5!
 
 The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
