@@ -47,14 +47,9 @@ class UsersController extends AppController
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
-
             $user = $this->Users->patchEntity($user, $this->request->data);
-            $user->set(array(
-                'created' => date("Y-m-d H:i:s"),
-                'modified' => date("Y-m-d H:i:s"),
-                'name' => "Renato"
-            ));
-
+            $user['created'] = date("Y-m-d H:i:s");
+            $user['modified'] = date("Y-m-d H:i:s");
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
                 return $this->redirect(['action' => 'index']);
@@ -81,9 +76,7 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->data);
 
-            $user->set(array(
-                'modified' => date("Y-m-d H:i:s"),
-            ));
+            $user['modified'] = date("Y-m-d H:i:s");
 
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));

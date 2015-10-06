@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 
 class UsersTable extends Table
 {
+
+
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
@@ -29,5 +31,3 @@ class UsersTable extends Table
         return $validator;
     }
 }
-
- ?>
